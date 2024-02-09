@@ -42,7 +42,7 @@ const router = createBrowserRouter(
 			<Route path="/home" element={<Home />} />
 			<Route path="/contact" element={<Contact />} />
 			<Route path="/about" element={<About />} />
-			{/* <Route path="/theme" element={<Themecontainer />} /> */}
+			<Route path="/theme" element={<Themecontainer />} />
 			<Route path="/passwordgenerator" element={<PasswordGenerator />} />
 			<Route path="/converter" element={<Converter />} />
 			<Route path="/counter" element={<Counter />} />

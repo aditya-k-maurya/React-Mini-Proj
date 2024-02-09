@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function ProjBox({ mini }) {
 
   const { title, description, image, path } = mini;

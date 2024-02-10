@@ -11,6 +11,7 @@ import Themecontainer from './components/themeChanger/themecontainer'
 import PasswordGenerator from './components/PassGenerator/PasswordGnerator'
 import Counter from './components/Counter/Counter'
 import Converter from './components/currencyConverter/Converter'
+import TodoContainer from './components/To-do/TodoContainer'
 
 // const router = createBrowserRouter([
 //   {
@@ -46,6 +47,7 @@ const router = createBrowserRouter(
 			<Route path="/passwordgenerator" element={<PasswordGenerator />} />
 			<Route path="/converter" element={<Converter />} />
 			<Route path="/counter" element={<Counter />} />
+			<Route path="/todo" element={<TodoContainer />} />
 			<Route loader={githubInforLoader} path="/github" element={<Github />} />
 		</Route>
 	)

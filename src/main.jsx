@@ -13,6 +13,7 @@ import Counter from './components/Counter/Counter'
 import Converter from './components/currencyConverter/Converter'
 import TodoContainer from './components/To-do/TodoContainer'
 import Calculator from './components/Calculator/Calculator'
+import ReduxTodo from './components/To-do-Redux/ReduxTodo'
 
 // const router = createBrowserRouter([
 //   {
@@ -50,6 +51,7 @@ const router = createBrowserRouter(
 			<Route path="/counter" element={<Counter />} />
 			<Route path="/todo" element={<TodoContainer />} />
 			<Route path="/calculator" element={<Calculator />} />
+			<Route path="/reduxtodo" element={<ReduxTodo />} />
 			<Route loader={githubInforLoader} path="/github" element={<Github />} />
 		</Route>
 	)

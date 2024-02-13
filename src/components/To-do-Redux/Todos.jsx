@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeTodo } from "../../feature/todo/todoSlice";
+import { removeTodo, toggleTodo,updateTodo } from "../../feature/todo/todoSlice";
 
 function Todos() {
+  const [completed, setCompleted] = useState(false)
   // useSelector is method which have state parameter which get values from store
 	const todos = useSelector((state) => state.todos);
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  
+
 
 	return (
 		<>
-			<div>Todos</div>
 			<ul className="list-none">
 				{todos.map((todo) => (
 					<li
-						className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
+            className={`m-auto mt-4 flex max-w-[500px]  justify-between items-center bg-zinc-800 px-4 py-2 rounded`}
 						key={todo.id}
 					>
-						<div className="text-white">{todo.text}</div>
+            <input type="checkbox"
+              checked={todo.completed}
+              onChange={() => {
+                dispatch(toggleTodo(todo.id))
+              }}
+            />
+
+            <div className={`${todo.completed?"text-gray-500 line-through":"text-white"}`}>{todo.text}</div>
 						<button
 							onClick={() => dispatch(removeTodo(todo.id))}
 							className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"

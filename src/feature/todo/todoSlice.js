@@ -3,7 +3,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 const initialState = {
 	todos: [
 		{
-			id:1,
+			id: 1,
 			text: "I will do it",
 			completed: false,
 		},
@@ -38,19 +38,12 @@ export const todoSlice = createSlice({
 			state.todos = state.todos.filter((todo) => todo.id !== action.payload);
 		},
 
-		updateTodo: (state, action) => {
+		toggleTodo: (state, action) => {
 			state.todos.map((todo) => {
-				if (todo.id === action.payload.id) {
-					todo.text = action.payload.text;
+				if (todo.id === action.payload) {
+					todo.completed = !todo.completed;
 				}
 			});
-		},
-
-		toggleTodo: (state, action) => {
-			const todo = state.todos.filter((todo) => todo.id === action.payload.id);
-			if (todo) {
-				todo.completed = !todo.completed;
-			}
 		},
 	},
 });

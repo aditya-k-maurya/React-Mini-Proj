@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./weather-app.css";
 
 import search_icon from "../../assets/img/search.png";
@@ -14,28 +14,30 @@ const WeatherApp = () => {
 
   let api_key = "8a33760b60ab7dd8def2285694a9e4ec";
 
-  const [wicon , setWicon] = useState(cloud_icon);
+  const [wicon, setWicon] = useState(cloud_icon);
+  const [humidity, setHumidity] = useState();
+  const [wind, setWind] = useState();
+  const [temprature, setTemprature] = useState();
+  const [location, setLocation] = useState();
+  const [input, setInput] = useState("");
 
 
-  const search = async () =>{
+
+  const search = async (input) =>{
     const element = document.getElementsByClassName("cityInput");
-    if(element[0].value===""){
+    if(input===""){
       return 0;
     }
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=Metric&appid=${api_key}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=Metric&appid=${api_key}`;
 
 
     let response = await fetch(url);
     let data = await response.json();
-    const humidity = document.getElementsByClassName("humidity-percent")
-    const wind = document.getElementsByClassName("wind-rate")
-    const temprature = document.getElementsByClassName("weather-temp")
-    const location =document.getElementsByClassName("weather-location")
 
-    humidity[0].innerHTML = data.main.humidity+ " %";
-    wind[0].innerHTML= data.wind.speed+ " km/hr";
-    temprature[0].innerHTML = Math.floor(data.main.temp)+"°C";
-    location[0].innerHTML = data.name;
+    setHumidity(data.main.humidity);
+    setWind(data.wind.speed)
+    setTemprature(data.main.temp)
+    setLocation(data.name);
 
     if(data.weather[0].icon==="01d" || data.weather[0].icon==="01n"){
       setWicon(clear_icon);
@@ -61,11 +63,25 @@ const WeatherApp = () => {
 
   }
 
+  useEffect(() => {
+    search("New Delhi")
+  },[])
+
   return (
     <div className="container">
       <div className="top-bar">
-        <input type="text" className="cityInput" placeholder="search" />
-        <div className="search-icon" onClick={search}>
+        <input
+          type="text"
+          className="cityInput"
+          placeholder="search"
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value)
+          }}
+        />
+        <div className="search-icon" onClick={() => {
+          search(input)
+        }}>
           <img src={search_icon} alt="" />
         </div>
       </div>
@@ -73,20 +89,20 @@ const WeatherApp = () => {
       <div className="weather-image">
         <img src={wicon} alt="" />
       </div>
-      <div className="weather-temp">24°C</div>
-      <div className="weather-location">New Delhi</div>
+      <div className="weather-temp">{temprature}°C</div>
+      <div className="weather-location">{location}</div>
       <div className="data-container">
         <div className="element">
           <img src={humidity_icon} alt="" className="icon" />
           <div className="data">
-            <div className="humidity-percent">64%</div>
+            <div className="humidity-percent">{humidity}%</div>
             <div className="text">Humidity</div>
           </div>
         </div>
         <div className="element">
           <img src={wind_icon} alt="" className="icon" />
           <div className="data">
-            <div className="wind-rate">18 km/h</div>
+            <div className="wind-rate">{wind} km/h</div>
             <div className="text">Wind Speed</div>
           </div>
         </div>

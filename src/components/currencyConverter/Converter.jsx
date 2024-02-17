@@ -24,7 +24,7 @@ function Converter() {
 	};
 
 	return (
-		<div className="w-full h-screen flex flex-wrap bg-orange-800 justify-center items-center bg-cover bg-no-repeat">
+		<div className="w-full h-screen flex flex-wrap bg-gray-400 justify-center items-center bg-cover bg-no-repeat">
 			<div className="w-full">
 				<div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
 					<form
@@ -46,7 +46,7 @@ function Converter() {
 						<div className="relative w-full h-0.5">
 							<button
 								type="button"
-								className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-orange-900 text-white px-2 py-0.5"
+								className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-black text-white px-2 py-0.5"
 								onClick={swap}
 							>
 								swap
@@ -64,7 +64,7 @@ function Converter() {
 						</div>
 						<button
 							type="submit"
-							className="w-full bg-orange-900 text-white px-4 py-3 rounded-lg"
+							className="w-full bg-black text-white px-4 py-3 rounded-lg"
 						>
 							Convert {from.toUpperCase()} to {to.toUpperCase()}
 						</button>

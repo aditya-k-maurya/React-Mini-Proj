@@ -91,7 +91,7 @@ const PasswordGenerator = () => {
 									setCharAllowed((prev) => !prev);
 								}}
 							></input>
-							<label htmlFor="characters">Characters</label>
+							<label htmlFor="characters">Symbols</label>
 						</div>
 					</div>
 				</div>

@@ -13,7 +13,7 @@ function Home() {
 				<p className="text-gray-300 pb-8">
 					This project only contain my small mini porjects that are made to build strong foundation on react.
 				</p>
-				<div className=" flex justify-center gap-8 flex-wrap">
+				<div className=" flex justify-center gap-8 flex-wrap pb-12">
 					{mini.map((miniProj) => (
 						<div key={miniProj.key}>
 							<ProjBox mini={miniProj} />

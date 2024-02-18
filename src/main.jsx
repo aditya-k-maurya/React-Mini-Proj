@@ -15,6 +15,7 @@ import TodoContainer from './components/To-do/TodoContainer'
 import Calculator from './components/Calculator/Calculator'
 import ReduxTodo from './components/To-do-Redux/ReduxTodo'
 import WeatherApp from './components/WeatherApp/WeatherApp'
+import SearchImg from './components/SearchImg/SearchImg'
 
 // const router = createBrowserRouter([
 //   {
@@ -54,6 +55,7 @@ const router = createBrowserRouter(
 			<Route path="/calculator" element={<Calculator />} />
 			<Route path="/reduxtodo" element={<ReduxTodo />} />
 			<Route path="/weather" element={<WeatherApp />} />
+			<Route path="/image" element={<SearchImg />} />
 			<Route loader={githubInforLoader} path="/github" element={<Github />} />
 		</Route>
 	)

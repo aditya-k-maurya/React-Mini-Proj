@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500;1,700&display=swap");
+
+.image-container {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	font-family: "Roboto", sans-serif;
+}
+
+.image-container h1 {
+	text-align: center;
+	padding: 1rem;
+	font-weight: bold;
+	font-size: 36px;
+	padding-top: 2rem;
+}
+
+#search-input {
+	width: 60%;
+	max-width: 400px;
+	padding: 10px 20px;
+	border: none;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	font-size: 1rem;
+	color: #333;
+	margin-left: 30%;
+	margin-right: 2rem;
+}
+#search-button {
+	align-items: center;
+	background-color: #0a66c2;
+	border: 0;
+	border-radius: 100px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+		"Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+		"Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 20px;
+	max-width: 480px;
+	min-height: 40px;
+	min-width: 0px;
+	overflow: hidden;
+	padding: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	touch-action: manipulation;
+	transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+		box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+		color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	user-select: none;
+	-webkit-user-select: none;
+	vertical-align: middle;
+}
+
+#search-button:hover,
+#search-button:focus {
+	background-color: #16437e;
+	color: #ffffff;
+}
+
+#search-button:active {
+	background: #09223b;
+	color: rgb(255, 255, 255, 0.7);
+}
+
+#search-button:disabled {
+	cursor: not-allowed;
+	background: rgba(0, 0, 0, 0.08);
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.image-container form input {
+	margin: auto;
+}
+
+.search-result {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	min-width: 400px;
+	margin: 0 auto;
+}
+
+.search-results {
+	margin-bottom: 60px;
+	width: 30%;
+	height: 30%;
+	border-radius: 5px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-result img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	transition: opacity 0.2 ease-in-out;
+}
+
+.search-result img:hover {
+	opacity: 0.8;
+}
+
+.search-result a {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #d4d4d4;
+	display: block;
+	padding: 20px;
+	text-transform: capitalize;
+}
+
+#show-more-button {
+	background-color: #008cba;
+	font-size: 18px;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+	display: block;
+	margin: 30px auto;
+	border-radius: 5px;
+	cursor: pointer;
+	display: none;
+}
+
+@media screen and (max-width: 750px) {
+	.search-results {
+		width: 45%;
+	}
+
+	.search-result {
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.search-results {
+		width: 100%;
+	}
+}

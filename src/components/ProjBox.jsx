@@ -9,7 +9,7 @@ function ProjBox({ mini }) {
 			<div className="w-[100%] mt-4">
 				<img
 					className="w-[100%]  rounded-lg"
-					style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px;" }}
+					style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
 					src={image}
 					alt=""
 				/>

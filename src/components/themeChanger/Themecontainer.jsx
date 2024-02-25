@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ThemeContext } from "../../context/theme";
 import ThemeBtn from "./themeBtn";
 import { ThemeProvider } from "../../context/theme";
 

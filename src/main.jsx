@@ -6,7 +6,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './components/Layout/Layout'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Themecontainer from './components/themeChanger/themecontainer'
+import Themecontainer from './components/themeChanger/Themecontainer'
 import PasswordGenerator from './components/PassGenerator/PasswordGnerator'
 import Counter from './components/Counter/Counter'
 import Converter from './components/currencyConverter/Converter'

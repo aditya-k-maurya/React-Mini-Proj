@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ThemeBtn from "./themeBtn";
+import ThemeBtn from "./ThemeBtn";
 import { ThemeProvider } from "../../context/theme";
 
 function Themecontainer() {

@@ -1,7 +1,6 @@
 import React from "react";
 import ProjBox from "../components/ProjBox";
 import mini from "../assets/data/mini";
-import Home2 from "./Home2";
 
 function Home() {
 	return (
@@ -11,7 +10,8 @@ function Home() {
 					React projects
 				</h1>
 				<p className="text-gray-300 pb-8">
-					This project only contain my small mini porjects that are made to build strong foundation on react.
+					This project only contain my small mini porjects that are made to
+					build strong foundation on react.
 				</p>
 				<div className=" flex justify-center gap-8 flex-wrap pb-12">
 					{mini.map((miniProj) => (
@@ -20,8 +20,7 @@ function Home() {
 						</div>
 					))}
 				</div>
-      </div>
-      <Home2 />
+			</div>
 		</div>
 	);
 }

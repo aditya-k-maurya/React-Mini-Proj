@@ -56,7 +56,7 @@ const data = [
 	},
 	{
 		id: "6",
-		alt_description: "Waterfall",
+		alt_description: "Forest",
 		urls: {
 			small:
 				"https://plus.unsplash.com/premium_photo-1690164161383-f5ff30a790bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=385&q=80",

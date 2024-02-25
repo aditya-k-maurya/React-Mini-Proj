@@ -10,9 +10,7 @@ function SearchImg() {
 	const [results, setResult] = useState(data);
 	const [search, setSearch] = useState("");
 
-	async function handleClick(event) {
-		event.preventDefault();
-
+	async function getImage() {
 		try {
 			const url = `https://api.unsplash.com/search/photos?page=${page}&query=${search}&client_id=${accessKey}`;
 			const response = await fetch(url);
@@ -23,7 +21,7 @@ function SearchImg() {
 			console.log(error);
 		}
 
-		setSearch("");
+		// setSearch("");
 
 		page++;
 
@@ -31,6 +29,12 @@ function SearchImg() {
 			let showMore = document.getElementById("show-more-button");
 			showMore.style.display = "block";
 		}
+	}
+
+	function handleClick(event) {
+		event.preventDefault();
+		page = 1;
+		getImage();
 	}
 
 	return (
@@ -58,8 +62,14 @@ function SearchImg() {
 					))}
 			</div>
 
-      <button id="show-more-button">Show More...</button>
-      
+			<button
+				id="show-more-button"
+				onClick={() => {
+					getImage();
+				}}
+			>
+				Show More...
+			</button>
 		</div>
 	);
 }

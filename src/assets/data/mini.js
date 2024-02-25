@@ -6,8 +6,17 @@ import todoredux from "../img/todoredux.png";
 import calculator from "../img/calculator.png";
 import password from "../img/password.png";
 import counter from "../img/counter.png";
+import searchImg from "../img/searchImg.png";
 
 const mini = [
+	{
+		key: 9,
+		title: "Search Image App",
+		description:
+			"Get any image from the unsplash in one search",
+		image: searchImg,
+		path: "/image",
+	},
 	{
 		key: 8,
 		title: "Weather App",
@@ -26,7 +35,8 @@ const mini = [
 	{
 		key: 6,
 		title: "Currency converter",
-		description: "Convert currency and calculate the amount in different curriencies",
+		description:
+			"Convert currency and calculate the amount in different curriencies",
 		image: currency,
 		path: "/converter",
 	},

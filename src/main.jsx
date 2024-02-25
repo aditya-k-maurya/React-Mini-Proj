@@ -6,7 +6,6 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './components/Layout/Layout'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Github, { githubInforLoader } from './pages/Github'
 import Themecontainer from './components/themeChanger/themecontainer'
 import PasswordGenerator from './components/PassGenerator/PasswordGnerator'
 import Counter from './components/Counter/Counter'
@@ -56,7 +55,6 @@ const router = createBrowserRouter(
 			<Route path="/reduxtodo" element={<ReduxTodo />} />
 			<Route path="/weather" element={<WeatherApp />} />
 			<Route path="/image" element={<SearchImg />} />
-			<Route loader={githubInforLoader} path="/github" element={<Github />} />
 		</Route>
 	)
 );
